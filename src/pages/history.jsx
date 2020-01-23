@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../css/game.css'
+
 
 class History extends React.Component{
     constructor(props) {
@@ -10,7 +10,6 @@ class History extends React.Component{
             data_history: [],
         };
     }
-
 
     componentDidMount(){
         this.get_data();
@@ -39,7 +38,7 @@ class History extends React.Component{
         console.log(this.state);
         return(
             <div>
-                <table className="table table-dark">
+                <table className="table table-dark" style={{margin: "20px"}}>
                     <thead>
                     <tr>
                         <th scope="col">#</th>
