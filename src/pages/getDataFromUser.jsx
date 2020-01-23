@@ -26,7 +26,6 @@ class GetDataFeomUser extends React.Component{
 
 
     render() {
-        // console.log(this.state);
         return(
             <div className={"home_page d-flex"}>
                 {this.state.min_number && this.state.max_number && this.state.name ?

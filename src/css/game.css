@@ -22,28 +22,6 @@ form{
     align-items: center;
 }
 
-
-.myform{
-    position: absolute;
-    transform: translate(-50%,0%);
-    top: 50px;
-    left: 50%;
-    z-index: 100;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 1rem;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 1.1rem;
-    outline: 0;
-    max-width: 500px;
-}
-
 .input_div{
     text-align: center;
     justify-content: center;
