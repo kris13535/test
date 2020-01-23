@@ -17,7 +17,6 @@ class Game extends React.Component{
         };
     }
 
-
     getRndInteger(min, max) {
         return  Math.floor(Math.random() * (max - min + 1) ) + min;
 
@@ -52,18 +51,13 @@ class Game extends React.Component{
 
     async data(){
         const data = await axios.post(`http://localhost:5000/dataFormGame`,this.state );
-        console.log(data);
     }
-
 
     get_my_history_games = () =>{
         this.setState({
             history_games: !this.state.history_games,
         })
     };
-
-
-
 
     render() {
         console.log(this.state);
