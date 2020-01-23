@@ -18,7 +18,6 @@ function postGame(data) {
 
 function getAllgames(data) {
     const {user_name} = data;
-    console.log(user_name);
     return new Promise((resolve, reject) => {
         try {
             connection.query(`SELECT * FROM games where user_name = ?`,[user_name],(error, results, fields) => {
@@ -26,7 +25,6 @@ function getAllgames(data) {
                 reject(error);
                 return;
             }
-            console.log(results);
             resolve(results);
             });
         } catch (error) {

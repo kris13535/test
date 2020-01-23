@@ -15,8 +15,6 @@ class Game extends React.Component{
             user_number: null,
             one_comp_guess: this.getRndInteger(parseInt(this.props.min_number), parseInt(this.props.max_number)),
         };
-
-        // console.log(this.state)
     }
 
 
@@ -60,7 +58,7 @@ class Game extends React.Component{
 
     get_my_history_games = () =>{
         this.setState({
-            history_games: true,
+            history_games: !this.state.history_games,
         })
     };
 
@@ -73,26 +71,27 @@ class Game extends React.Component{
             <div>
                 <div className={"card"} style={{margin: "20px", padding: "20px"}}>
                     <div className="alert alert-primary " role="alert">
-                        {this.state.one_comp_guess}
+                        <p> Your number is {this.state.one_comp_guess} ? </p>
                     </div>
 
-                    <div>
-                        <button type="button" className="btn btn-outline-primary butt" onClick={this.smaller_number}>My number is smaller than that number</button>
-                    </div>
+                    <div className={"d-flex"}>
+                        <div className={"butt"}>
+                            <button type="button" className="btn btn-outline-primary butt" onClick={this.smaller_number}>My number is smaller than that number</button>
+                        </div>
 
 
-                    <div>
-                        <button type="button" className="btn btn-outline-success butt" onClick={this.my_number}>it's my number</button>
-                    </div>
+                        <div className={"butt"}>
+                            <button type="button" className="btn btn-outline-success butt" onClick={this.my_number}>it's my number</button>
+                        </div>
 
-                    <div>
-                        <button type="button" className="btn btn-outline-primary butt" onClick={this.biger_number}>My number is greater than that number</button>
+                        <div className={"butt"}>
+                            <button type="button" className="btn btn-outline-primary butt" onClick={this.biger_number}>My number is greater than that number</button>
+                        </div>
                     </div>
                 </div>
-
                 <div>
                     <div>
-                        <button type="button" className="btn btn-outline-info" onClick={this.get_my_history_games}>get my history games</button>
+                        <button type="button" className="btn alert-success" onClick={this.get_my_history_games}>get my history games</button>
                     </div>
                 </div>
 

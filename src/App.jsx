@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
 import GetDataFeomUser from "./pages/getDataFromUser";
-
+import '../src/css/game.css'
 
 class App extends React.Component {
     constructor(props) {
@@ -15,19 +15,13 @@ class App extends React.Component {
             <div>
 
                 <Router>
-
-
                     <Switch>
-                        {/*<Route path={"/MySpace"}>*/}
-                        {/*    <Game/>*/}
-                        {/*</Route>*/}
 
                         <Route path="/">
                             <GetDataFeomUser/>
                         </Route>
 
                     </Switch>
-
                 </Router>
             </div>
         );
